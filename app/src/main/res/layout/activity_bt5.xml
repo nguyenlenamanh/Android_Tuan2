@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Chương trình tính tiền bán sách online"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/bollowhead"
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFC33"
+        android:text="Thông tin hóa đơn:"
+        />
+
+    <TextView
+        android:id="@+id/lbtenKH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bollowhead"
+        android:layout_marginTop="17dp"
+        android:text="Tên khách hàng: " />
+    <EditText
+        android:id="@+id/txtTenKH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbtenKH"
+        android:layout_below="@id/bollowhead"/>
+
+    <TextView
+        android:id="@+id/lbSLS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbtenKH"
+        android:layout_marginTop="17dp"
+        android:text="Số lượng sách: " />
+    <EditText
+        android:id="@+id/txtSL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbtenKH"
+        android:layout_below="@id/lbtenKH"/>
+
+    <CheckBox
+        android:id="@+id/ckbVIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Khách hàng VIP"
+        android:layout_toRightOf="@id/lbtenKH"
+        android:layout_below="@id/lbSLS"/>
+
+    <TextView
+        android:id="@+id/lbTT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ckbVIP"
+        android:layout_marginTop="17dp"
+        android:text="Tổng tiền: " />
+
+    <TextView
+        android:id="@+id/lbTongTien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbtenKH"
+        android:layout_below="@id/ckbVIP"
+        android:layout_marginTop="17dp"
+        android:text="0"
+        android:background="#B9B9B3"
+        android:gravity="center"
+        android:textColor="#247602"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbTongTien"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/btnTinhTT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Tính TT"/>
+
+        <Button
+            android:id="@+id/btnTiep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tiếp"/>
+
+        <Button
+            android:id="@+id/btnThongKe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Thống kê"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bollowmid"
+        android:layout_below="@id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFC33"
+        android:text="Thông tin thống kê:"
+        />
+
+    <TextView
+        android:id="@+id/lbtongKH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bollowmid"
+        android:layout_marginTop="17dp"
+        android:text="Tổng số khách hàng: " />
+    <EditText
+        android:id="@+id/txtTongKH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbTongVIP"
+        android:layout_below="@id/bollowmid"/>
+
+    <TextView
+        android:id="@+id/lbTongVIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbtongKH"
+        android:layout_marginTop="17dp"
+        android:text="Tổng số khách hàng VIP: " />
+    <EditText
+        android:id="@+id/txtTongVIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbTongVIP"
+        android:layout_below="@id/lbtongKH"/>
+
+    <TextView
+        android:id="@+id/lbTongThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbTongVIP"
+        android:layout_marginTop="17dp"
+        android:text="Tổng doanh thu: " />
+    <EditText
+        android:id="@+id/txtTongThu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lbTongVIP"
+        android:layout_below="@id/lbTongVIP"/>
+
+    <TextView
+        android:id="@+id/textviewbottom"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/lbTongThu"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="59dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/textviewbottom"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/exit" />
+
+</RelativeLayout>
